@@ -15,12 +15,23 @@ const NavBar = () => {
       "nav",
       { backgroundColor: "transparent" },
       {
-        backgroundColor: "#0000050",
+        backgroundColor: "#00000050",
         backgroundFilter: "blur(10px)",
         duration: 1,
         ease: "power1.inOut",
       },
     );
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: "#hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      })
+      .to(".right-leaf", { y: 400 }, 0)
+      .to(".right-leaf", { y: -400 }, 0);
   }, []);
   return (
     <nav>
