@@ -21,17 +21,6 @@ const NavBar = () => {
         ease: "power1.inOut",
       },
     );
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: "#hero",
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      })
-      .to(".right-leaf", { y: 200 }, 0)
-      .to(".right-leaf", { y: -200 }, 0);
   }, []);
   return (
     <nav>
